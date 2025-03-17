@@ -1,5 +1,4 @@
 package boardgame;
-import boardgame.Board;
 
 public class Piece {
 	protected Position position;
