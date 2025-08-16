@@ -12,7 +12,6 @@ import chess.Color;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
-import java.security.InvalidParameterException;
 
 public class ChessMatch {
 
@@ -122,7 +121,7 @@ public class ChessMatch {
 			throw new IllegalStateException("There is no piece to be promo");
 		}
 		if(!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")){
-			throw new InvalidParameterException("Invalid type for promotion");
+			return promoted;
 		}
 
 		Position pos = promoted.getChessPosition().toPosition();
